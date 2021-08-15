@@ -9,7 +9,8 @@ namespace WindowsFormTest
     {
         public string Selection { get; set; }
         private EPFReader epf;
-        private List<Frame> frameList;        
+        private List<Frame> frameList;
+        private List<Bitmap> bitmapList;
 
         public TileView()
         {
@@ -19,7 +20,9 @@ namespace WindowsFormTest
         private void TileView_Load(object sender, EventArgs e)
         {
             epf = new EPFReader();
+            bitmapList = new List<Bitmap>();
             frameList = epf.ReadEPF(Selection);
+            LoadBitmapList();
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -30,9 +33,17 @@ namespace WindowsFormTest
             {
                 int row = (int)Math.Floor(i / 16f);
                 int column = i % 16;
-                Bitmap bitmap = EPFRenderer.RenderEPF(frameList[i]);
-                Rectangle r = new Rectangle(column * maxSize, row * maxSize, bitmap.Width, bitmap.Height);
-                e.Graphics.DrawImage(bitmap, r);
+
+                Rectangle r = new Rectangle(column * maxSize, row * maxSize, bitmapList[i].Width, bitmapList[i].Height);
+                e.Graphics.DrawImage(bitmapList[i], r);
+            }
+        }
+
+        private void LoadBitmapList()
+        {
+            for (int i = 0; i < frameList.Count; i++)
+            {
+                bitmapList.Add(EPFRenderer.RenderEPF(frameList[i]));
             }
         }
 
@@ -42,16 +53,14 @@ namespace WindowsFormTest
 
             for (var i = 0; i < frameList.Count; i++)
             {
-                Bitmap bitmap = EPFRenderer.RenderEPF(frameList[i]);
-
-                if (bitmap.Width > size)
+                if (bitmapList[i].Width > size)
                 {
-                    size = bitmap.Width;
+                    size = bitmapList[i].Width;
                 }
 
-                if (bitmap.Height > size)
+                if (bitmapList[i].Height > size)
                 {
-                    size = bitmap.Height;
+                    size = bitmapList[i].Height;
                 }
             }
 
