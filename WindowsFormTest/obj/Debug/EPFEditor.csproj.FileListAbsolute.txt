@@ -1,0 +1,11 @@
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\obj\Debug\EPFEditor.csprojAssemblyReference.cache
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\obj\Debug\WindowsFormTest.Form1.resources
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\obj\Debug\WindowsFormTest.Properties.Resources.resources
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\obj\Debug\WindowsFormTest.TileView.resources
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\obj\Debug\EPFEditor.csproj.GenerateResource.cache
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\obj\Debug\EPFEditor.csproj.CoreCompileInputs.cache
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\obj\Debug\WindowsFormTest.exe
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\obj\Debug\WindowsFormTest.pdb
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\bin\Debug\WindowsFormTest.exe.config
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\bin\Debug\WindowsFormTest.exe
+C:\Users\je455\Desktop\WindowsFormTest\WindowsFormTest\bin\Debug\WindowsFormTest.pdb
